@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import './index.css';
-import OTSBanner from './images/OTSBanner.svg';
+import * as serviceWorker from 'serviceWorker';
+import 'index.css';
+import OTSBanner from 'images/OTSBanner.svg';
 
 const notesReducer = (state, action) => {
         switch (action.type) {
