@@ -22,6 +22,18 @@ const notesReducer = (state, action) => {
         }
     }
 
+const hideContentReducer = (state, action) => {
+    switch (action.type) {
+        case 'HIDE': 
+            return action.visable = null
+            
+        case 'SHOW':
+            return { visable: true}
+        default:
+            return state
+    }
+}
+
 const QuickMeeting = () => {
     document.title = 'Lone Star Quick Meeting'
         //const [notes, setNotes] = useState([])
@@ -30,6 +42,8 @@ const QuickMeeting = () => {
         // simple State use
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [visable, setVisable] = useReducer(hideContentReducer, true)
+
 
     const addNote = (e) => {
         e.preventDefault()
@@ -59,6 +73,35 @@ const QuickMeeting = () => {
         }
     }, [])
 
+useEffect(() => {
+    console.log('hide or not init load')
+    const visable = JSON.parse(localStorage.getItem('visable'))
+    if (visable) {
+        dispatch({ type: 'SHOW', visable})
+    }
+}, [])
+
+useEffect(() => {
+    localStorage.setItem('visable', JSON.stringify(visable))
+}, [visable])
+
+    
+    const setVisableHide = (visable) => {
+                console.log('Hide')
+        setVisable({
+            type: 'HIDE',
+            visable
+        })
+    }
+
+    const setVisableShow = (visable) => {
+                console.log('show')
+        setVisable({
+            type: 'SHOW',
+            visable
+        })
+    }
+
     const removeNote = (title) => {
             // setNotes(notes.filter((note) => note.title !== title))
             dispatch({
@@ -79,7 +122,7 @@ const QuickMeeting = () => {
             {notes.map((note) => (
                 <Note key={note.title} note={note} removeNote={removeNote}/>
             ))}
-            <div className="NoteApp-inputheader"> 
+            <div className={"NoteApp-inputheader"}> 
             <p>Add Content</p>
             <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -87,6 +130,11 @@ const QuickMeeting = () => {
                 <button className="Button">Add Content</button>
             </form>
             </div>
+            <div className={setVisableHide ? <h1>Test area</h1> : ''}>
+                <h1>Test area</h1>
+                <p key="2">{visable ? <p>!!Test area!!</p> : ''}</p>
+            <button onClick={() => setVisableHide()}>hide</button>
+        </div>
         </div>
     )
 }
