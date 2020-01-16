@@ -2,7 +2,7 @@ import React, { useState, useEffect, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from 'serviceWorker';
 import 'index.css';
-import OTSBanner from 'images/OTSBanner.svg';
+import OTSBanner from 'images/OTS-Banner.svg';
 
 const notesReducer = (state, action) => {
         switch (action.type) {
@@ -133,8 +133,8 @@ useEffect(() => {
             {notes.map((note) => (
                 <Note key={note.title} note={note} removeNote={removeNote}/>
             ))}
-            <div className={"NoteApp-inputheader"}> 
-            <p>Add Content</p>
+            <div > 
+            <p className={"NoteApp-inputheader"}>Add Content</p>
             {/* <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <textarea className="NoteApp-input" value={body} onChange={(e) => setBody(e.target.value)}></textarea>
@@ -152,21 +152,28 @@ const InputArea = ({ setVisableToggle, visable, body,setTitle,setBody, addNote, 
 
         // }, [])
         return (
-            <div className={"NoteApp-inputcontainer"}>
+            <div className={"NoteApp-hide"}>
                 { visable &&
             <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <textarea className="NoteApp-input" value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+                <div className="Button__center">
                 <button className="Button">Add Content</button>
+                <button className="Button" onClick={() => {setVisableToggle(visable)}}>{visable ? 'Hide' : 'Show'}</button>
+</div>
             </form>
 }
             {/* <h1 key="3">{visable ? <h1>Test area</h1> : ''}</h1>
             <p key="2">{visable ? <p>!!Test area!!</p> : ''}</p> */}
-        <button className="Button" onClick={() => {setVisableToggle(visable)}}>{visable ? 'Hide' : 'Show'}</button>
         {/* <button
             onClick={() => setToggle(toggleClick ? false : true)}>
                 {toggleClick ? 'Hide' : 'Show'}
             </button> */}
+            <div>
+                {!visable &&
+            <button className="Button" onClick={() => {setVisableToggle(visable)}}>{visable ? 'Hide' : 'Show'}</button>
+                }
+            </div>
     </div>
         )
 }

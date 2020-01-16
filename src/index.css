@@ -1,6 +1,7 @@
 :root {
     --LSCBlue: #003768;
     --LSCRed: #b30838;
+    --darkRed: #8b0000;
     --LSCTan: #f1c585;
     --LSCLightBlue: #c7eafb;
     --xs-size: .2rem;
@@ -8,19 +9,21 @@
     --m-size: 1.6rem;
     --l-size: 3.2rem;
     --xl-size: 4.8rem;
+    --xxxl-size: 48rem;
     --desktop-breakpoint: 45rem;
 }
 
 .Button {
     background: var(--LSCRed);
     color: white;
-    border: none;
-    align-self: center;
+    border:  solid;
+    border-color: var(--darkRed);
+    border-width: var(--xs-size);
     padding: var(--s-size);
     line-height: 1;
-    min-width: 4rem;
+    min-width: 6rem;
     max-width: 6rem;
-    
+    margin-right: var(--m-size);
 }
 
 .Button-body {
@@ -31,6 +34,12 @@
     
 }
 
+.Button__center {
+
+    display:flex;
+    justify-content:space-around;
+}
+
 .NoteApp {
     border-top: none;
     align-content: center;
@@ -39,9 +48,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: 'EB Garamond', serif;}
+    font-family: 'EB Garamond', serif;
+}
 
-Trajan Regular
 .App-logo {
     display: flex;
     flex-direction: column;
@@ -73,26 +82,28 @@ Trajan Regular
     max-width: 40rem;
 }
 
-
-
 .NoteApp-inputheader {
     color: white;
-    margin-top: 10rem;
+margin-top: var(--xxxl-size);
     background: var(--LSCBlue);
-    padding: var(--xl-size);
 }
+
 .NoteApp-inputcontainer {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    align-items: center;
     min-width: 30rem;
 }
 
 .NoteApp-input {
     text-align: left;
-    align-self: center;
-    flex-direction: column;
     padding: var(--m-size);
     min-width: 30rem;
     resize:none;
 }
 
+.NotApp-hide {
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+}
