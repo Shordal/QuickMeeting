@@ -25,10 +25,12 @@ const notesReducer = (state, action) => {
 const hideContentReducer = (state, action) => {
     switch (action.type) {
         case 'HIDE': 
-            return action.visable = null
+            return action.visable = false
             
         case 'SHOW':
             return { visable: true}
+        case 'TOGGLE':
+            return action.visable ? false : true
         default:
             return state
     }
@@ -43,7 +45,7 @@ const QuickMeeting = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [visable, setVisable] = useReducer(hideContentReducer, true)
-
+    // const [toggleClick, setToggle] = useState(true)
 
     const addNote = (e) => {
         e.preventDefault()
@@ -101,6 +103,15 @@ useEffect(() => {
             visable
         })
     }
+    const setVisableToggle = (visable) => {
+                console.log('Toggle')
+        setVisable({
+            type: 'TOGGLE',
+            visable
+        })
+    }
+
+
 
     const removeNote = (title) => {
             // setNotes(notes.filter((note) => note.title !== title))
@@ -124,19 +135,40 @@ useEffect(() => {
             ))}
             <div className={"NoteApp-inputheader"}> 
             <p>Add Content</p>
+            {/* <form className="NoteApp-inputcontainer" onSubmit={addNote}>
+                <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <textarea className="NoteApp-input" value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+                <button className="Button">Add Content</button>
+            </form> */}
+                            <InputArea key='9' title={title} body={body} visable={visable} setVisableToggle={setVisableToggle} setTitle={setTitle} setBody={setBody} addNote={addNote}/>
+
+            </div>
+        </div>
+    )
+}
+
+const InputArea = ({ setVisableToggle, visable, body,setTitle,setBody, addNote, title }) => {
+        // useEffect(() => {
+
+        // }, [])
+        return (
+            <div className={"NoteApp-inputcontainer"}>
+                { visable &&
             <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <textarea className="NoteApp-input" value={body} onChange={(e) => setBody(e.target.value)}></textarea>
                 <button className="Button">Add Content</button>
             </form>
-            </div>
-            <div className={setVisableHide ? <h1>Test area</h1> : ''}>
-                <h1>Test area</h1>
-                <p key="2">{visable ? <p>!!Test area!!</p> : ''}</p>
-            <button onClick={() => setVisableHide()}>hide</button>
-        </div>
-        </div>
-    )
+}
+            {/* <h1 key="3">{visable ? <h1>Test area</h1> : ''}</h1>
+            <p key="2">{visable ? <p>!!Test area!!</p> : ''}</p> */}
+        <button className="Button" onClick={() => {setVisableToggle(visable)}}>{visable ? 'Hide' : 'Show'}</button>
+        {/* <button
+            onClick={() => setToggle(toggleClick ? false : true)}>
+                {toggleClick ? 'Hide' : 'Show'}
+            </button> */}
+    </div>
+        )
 }
 
 const Note = ({ note, removeNote }) => {
