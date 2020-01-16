@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/QuickMeeting/static/css/main.0d4a5343.chunk.css",
-    "main.js": "/QuickMeeting/static/js/main.2502b0e0.chunk.js",
-    "main.js.map": "/QuickMeeting/static/js/main.2502b0e0.chunk.js.map",
+    "main.js": "/QuickMeeting/static/js/main.8419bb9b.chunk.js",
+    "main.js.map": "/QuickMeeting/static/js/main.8419bb9b.chunk.js.map",
     "runtime-main.js": "/QuickMeeting/static/js/runtime-main.2dc85dfe.js",
     "runtime-main.js.map": "/QuickMeeting/static/js/runtime-main.2dc85dfe.js.map",
     "static/js/2.eeb112e8.chunk.js": "/QuickMeeting/static/js/2.eeb112e8.chunk.js",
     "static/js/2.eeb112e8.chunk.js.map": "/QuickMeeting/static/js/2.eeb112e8.chunk.js.map",
     "index.html": "/QuickMeeting/index.html",
-    "precache-manifest.e475b2bb71ce19bf640efe69ca694f1c.js": "/QuickMeeting/precache-manifest.e475b2bb71ce19bf640efe69ca694f1c.js",
+    "precache-manifest.bd9c0e6566e8d52d5bf01b3ee147602c.js": "/QuickMeeting/precache-manifest.bd9c0e6566e8d52d5bf01b3ee147602c.js",
     "service-worker.js": "/QuickMeeting/service-worker.js",
     "static/css/main.0d4a5343.chunk.css.map": "/QuickMeeting/static/css/main.0d4a5343.chunk.css.map",
     "static/js/2.eeb112e8.chunk.js.LICENSE": "/QuickMeeting/static/js/2.eeb112e8.chunk.js.LICENSE",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2dc85dfe.js",
     "static/js/2.eeb112e8.chunk.js",
     "static/css/main.0d4a5343.chunk.css",
-    "static/js/main.2502b0e0.chunk.js"
+    "static/js/main.8419bb9b.chunk.js"
   ]
 }

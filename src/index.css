@@ -13,6 +13,23 @@
     --desktop-breakpoint: 45rem;
 }
 
+* {
+    background-color: var(--LSCBlue);
+
+    
+}
+
+html {
+    font-size: 90.5%;
+    height: 100%;
+    width: 100%;
+    margin: none;
+    padding: none;
+ display: flex;
+ flex-direction: column;
+    
+}
+
 .Button {
     background: var(--LSCRed);
     color: white;
@@ -41,26 +58,32 @@
 }
 
 .NoteApp {
-    border-top: none;
-    align-content: center;
-    display: flex;
-    background-color: var(--LSCBlue);
+
+    top: 1px; /* Header Height */
+    bottom: 20px; /* Footer Height */
+    width: 100%;
+    overflow: auto;
+display: flex;
     flex-direction: column;
-    justify-content: center;
+    height : auto;
     text-align: center;
+    align-items: center;
+    align-content: center;
+    border: none;
+    background-color: var(--LSCBlue);
     font-family: 'EB Garamond', serif;
 }
 
 .App-logo {
-    display: flex;
-    flex-direction: column;
-    margin: none;
-    padding: none;
-    border: none;
+
+    width: 100%;
+    height: auto;
+width: 100%;
+
 }
 
+
 .NoteApp-header{
-   margin-bottom: var(--xs-size);
     color: white;
 }
 
@@ -68,7 +91,7 @@
     display: flex;
     flex-direction: column;
     align-self: center;
-    position: static;
+
     white-space: pre-wrap;
     margin: var(--s-size);
     border: none;
@@ -80,12 +103,17 @@
     padding: var(--s-size);
     min-width: 30rem;
     max-width: 40rem;
+   
+}
+
+.NoteApp-note-text {
+    background-color: var(--LSCred);
 }
 
 .NoteApp-inputheader {
     color: white;
-margin-top: var(--xxxl-size);
     background: var(--LSCBlue);
+    align-items: center;
 }
 
 .NoteApp-inputcontainer {
@@ -100,10 +128,11 @@ margin-top: var(--xxxl-size);
     padding: var(--m-size);
     min-width: 30rem;
     resize:none;
+    background-color: whitesmoke;
 }
 
 .NotApp-hide {
-    align-self: center;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    
 }

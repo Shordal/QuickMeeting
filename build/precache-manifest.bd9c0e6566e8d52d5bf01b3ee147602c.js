@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "963b24cf9174b133c3b69da2ab474f37",
+    "revision": "5fb111909c3d8f9f7776a93ca37cebc8",
     "url": "/QuickMeeting/index.html"
   },
   {
-    "revision": "d60408291a6c76d673f5",
+    "revision": "fa4a093ac15dd9b55e02",
     "url": "/QuickMeeting/static/css/main.0d4a5343.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/QuickMeeting/static/js/2.eeb112e8.chunk.js.LICENSE"
   },
   {
-    "revision": "d60408291a6c76d673f5",
-    "url": "/QuickMeeting/static/js/main.2502b0e0.chunk.js"
+    "revision": "fa4a093ac15dd9b55e02",
+    "url": "/QuickMeeting/static/js/main.8419bb9b.chunk.js"
   },
   {
     "revision": "ad0a316095b66b9f0551",

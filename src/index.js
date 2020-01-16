@@ -88,21 +88,21 @@ useEffect(() => {
 }, [visable])
 
     
-    const setVisableHide = (visable) => {
-                console.log('Hide')
-        setVisable({
-            type: 'HIDE',
-            visable
-        })
-    }
+    // const setVisableHide = (visable) => {
+    //             console.log('Hide')
+    //     setVisable({
+    //         type: 'HIDE',
+    //         visable
+    //     })
+    // }
 
-    const setVisableShow = (visable) => {
-                console.log('show')
-        setVisable({
-            type: 'SHOW',
-            visable
-        })
-    }
+    // const setVisableShow = (visable) => {
+    //             console.log('show')
+    //     setVisable({
+    //         type: 'SHOW',
+    //         visable
+    //     })
+    // }
     const setVisableToggle = (visable) => {
                 console.log('Toggle')
         setVisable({
@@ -134,7 +134,6 @@ useEffect(() => {
                 <Note key={note.title} note={note} removeNote={removeNote}/>
             ))}
             <div > 
-            <p className={"NoteApp-inputheader"}>Add Content</p>
             {/* <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <textarea className="NoteApp-input" value={body} onChange={(e) => setBody(e.target.value)}></textarea>
@@ -153,6 +152,8 @@ const InputArea = ({ setVisableToggle, visable, body,setTitle,setBody, addNote, 
         // }, [])
         return (
             <div className={"NoteApp-hide"}>
+                <p className={"NoteApp-inputheader"}>Add Content</p>
+
                 { visable &&
             <form className="NoteApp-inputcontainer" onSubmit={addNote}>
                 <input className="NoteApp-input" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -187,8 +188,8 @@ const Note = ({ note, removeNote }) => {
         }, [])
         return (
             <div className="NoteApp-note">
-            <h3>{note.title}</h3>
-            <p>{note.body}</p>
+            <h3 className="NoteApp-note-text">{note.title}</h3>
+            <p className="NoteApp-note-text">{note.body}</p>
             <button className="Button-body" onClick={() => removeNote(note.title)}>X</button>
         </div>
         )
