@@ -63,7 +63,7 @@ html {
     bottom: 20px; /* Footer Height */
     width: 100%;
     overflow: auto;
-display: flex;
+    display: flex;
     flex-direction: column;
     height : auto;
     text-align: center;
@@ -78,7 +78,7 @@ display: flex;
 
     width: 100%;
     height: auto;
-width: 100%;
+    width: 100%;
 
 }
 
@@ -118,8 +118,8 @@ width: 100%;
 
 .NoteApp-inputcontainer {
 
-    flex-direction: column;
-    align-items: center;
+    display: flexbox;
+    max-width: 40rem;
     min-width: 30rem;
 }
 
@@ -138,5 +138,26 @@ width: 100%;
 }
 
 .NoteApp-bottom {
-    position: fixed; bottom: 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+}
+
+.NoteApp-bottom-left {
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+}
+
+.Button--fullScreen {
+
+    background: var(--LSCRed);
+    color: white;
+    border:  solid;
+    border-color: var(--darkRed);
+    border-width: var(--xs-size);
+    padding: var(--s-size);
+    line-height: 1;
+    min-width: 6rem;
+    max-width: 6rem;
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/QuickMeeting/precache-manifest.bd9c0e6566e8d52d5bf01b3ee147602c.js"
+  "/QuickMeeting/precache-manifest.0b927cfc504e20074f5e425279855d16.js"
 );
 
 self.addEventListener('message', (event) => {

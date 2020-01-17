@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from 'serviceWorker';
 import 'index.css';
 import OTSBanner from 'images/OTS-Banner.svg';
+import { useFullScreen } from 'react-browser-hooks'
 
 const notesReducer = (state, action) => {
     switch (action.type) {
@@ -110,9 +111,7 @@ const QuickMeeting = () => {
             visable
         })
     }
-
-
-
+    
     const removeNote = (title) => {
         // setNotes(notes.filter((note) => note.title !== title))
         dispatch({
@@ -125,7 +124,10 @@ const QuickMeeting = () => {
         localStorage.setItem('notes', JSON.stringify(notes))
     }, [notes])
 
+    const fs = useFullScreen()
+
     return (
+        <div>
         <div className="NoteApp">
             <img src={OTSBanner} className="App-logo" alt="OTSBanner" />
             {/* <h1 className="NoteApp-header">Lone Star College</h1>
@@ -153,7 +155,14 @@ const QuickMeeting = () => {
                 setBody={setBody} 
                 addNote={addNote} 
                 />
-
+            </div>
+        </div>
+        <div className="NoteApp-bottom-left ">
+            <button 
+            className="Button--fullScreen" 
+            onClick={fs.toggle}>
+                {fs.fullScreen ? 'Exit FullScreen' : 'FullScreen'}
+            </button>
             </div>
         </div>
     )
@@ -207,11 +216,11 @@ const InputArea = ({
             <div className="NoteApp-bottom">
                 {!visable &&
                     <div className="NoteApp-hide">
-                        <p className={"NoteApp-inputheader"}>Add Content</p>
+                        {/* <p className={"NoteApp-inputheader"}>Add Content</p> */}
 
                         <button className="Button" onClick={() => { 
                             setVisableToggle(visable) 
-                            }}>{visable ? 'Hide' : 'Show'}</button>
+                            }}>{visable ? 'Hide' : 'Add Content'}</button>
                     </div>
                 }
             </div>
