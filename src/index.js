@@ -68,7 +68,7 @@ const QuickMeeting = () => {
 
     // fetching data from a database
     useEffect(() => {
-        console.log('Fetching local data')
+        // console.log('Fetching local data')
         const notes = JSON.parse(localStorage.getItem('notes'))
         if (notes) {
             dispatch({ type: 'POPULATE_NOTES', notes })
@@ -77,7 +77,7 @@ const QuickMeeting = () => {
     }, [])
 
     useEffect(() => {
-        console.log('hide or not init load')
+        // console.log('hide or not init load')
         const visable = JSON.parse(localStorage.getItem('visable'))
         if (visable) {
             dispatch({ type: 'SHOW', visable })
@@ -105,7 +105,7 @@ const QuickMeeting = () => {
     //     })
     // }
     const setVisableToggle = (visable) => {
-        console.log('Toggle')
+        // console.log('Toggle')
         setVisable({
             type: 'TOGGLE',
             visable
@@ -230,9 +230,9 @@ const InputArea = ({
 
 const Note = ({ note, removeNote }) => {
     useEffect(() => {
-        console.log('Setting up effect!')
+        // console.log('Setting up effect!')
         return () => {
-            console.log('Cleaning up effect!')
+            // console.log('Cleaning up effect!')
         }
     }, [])
     return (
