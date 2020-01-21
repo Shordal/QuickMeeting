@@ -29,7 +29,7 @@ const hideContentReducer = (state, action) => {
             return action.visable = false
 
         case 'SHOW':
-            return { visable: true }
+            return action.visable = true
         case 'TOGGLE':
             return action.visable ? false : true
         default:
@@ -45,7 +45,10 @@ const QuickMeeting = () => {
     // simple State use
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [visable, setVisable] = useReducer(hideContentReducer, true)
+    const [visable, setVisable] = useReducer(hideContentReducer, 
+        JSON.parse(localStorage.getItem('visable')) ? true : JSON.parse(localStorage.getItem('visable'))
+
+        )
     // const [toggleClick, setToggle] = useState(true)
 
     const addNote = (e) => {
@@ -200,7 +203,6 @@ const InputArea = ({
                         <button className="Button" onClick={() => { 
                             setVisableToggle(visable) 
                             }}>{visable ? 'Hide' : 'Show'}</button>
-
 
                         <button className="Button">Add Content</button>
 
