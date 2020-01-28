@@ -39,7 +39,12 @@ const QuickMeeting = () => {
     }, [notes]);
 
     return (
-        <QuickContext.Provider value={{ notes, dispatch, visable, setVisable }}>
+        <QuickContext.Provider value={{ 
+            notes, 
+            dispatch, 
+            visable, 
+            setVisable 
+        }}>
             <div className="NoteApp">
                 <img src={OTSBanner} className="App-logo" alt="OTSBanner" />
                 <NoteList />
@@ -57,4 +62,3 @@ const QuickMeeting = () => {
 };
 
 export { QuickMeeting as default };
-
