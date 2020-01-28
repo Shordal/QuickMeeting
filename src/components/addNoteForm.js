@@ -59,8 +59,6 @@ const AddNoteForm = () => {
                         <button className="Button" onClick={() => {
                             setVisableToggle(visable)
                             scrollToBottom()
-                            // window.scrollTo({ bottom: 0, top: document.body.scrollHeight, behavior: "smooth" });
-                            // window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
                         }}>{visable ? 'Hide' : 'Add Content'}</button>
                     </div>
                 }
