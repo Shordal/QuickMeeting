@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/QuickMeeting/static/css/main.1a0db383.chunk.css",
+    "main.css": "/QuickMeeting/static/css/main.0cb44880.chunk.css",
     "main.js": "/QuickMeeting/static/js/main.235a7a3f.chunk.js",
     "main.js.map": "/QuickMeeting/static/js/main.235a7a3f.chunk.js.map",
     "runtime-main.js": "/QuickMeeting/static/js/runtime-main.2dc85dfe.js",
@@ -8,9 +8,9 @@
     "static/js/2.2e67d0b9.chunk.js": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js",
     "static/js/2.2e67d0b9.chunk.js.map": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js.map",
     "index.html": "/QuickMeeting/index.html",
-    "precache-manifest.c3007ed8ae1d6c47152993258f968503.js": "/QuickMeeting/precache-manifest.c3007ed8ae1d6c47152993258f968503.js",
+    "precache-manifest.838eda19c3b047903622551f3f449957.js": "/QuickMeeting/precache-manifest.838eda19c3b047903622551f3f449957.js",
     "service-worker.js": "/QuickMeeting/service-worker.js",
-    "static/css/main.1a0db383.chunk.css.map": "/QuickMeeting/static/css/main.1a0db383.chunk.css.map",
+    "static/css/main.0cb44880.chunk.css.map": "/QuickMeeting/static/css/main.0cb44880.chunk.css.map",
     "static/js/2.2e67d0b9.chunk.js.LICENSE": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js.LICENSE",
     "static/media/LSCT-CollegeRelations-Banner.svg": "/QuickMeeting/static/media/LSCT-CollegeRelations-Banner.810af182.svg",
     "static/media/LSCT-StudentLife-Banner.svg": "/QuickMeeting/static/media/LSCT-StudentLife-Banner.ce23f183.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.2dc85dfe.js",
     "static/js/2.2e67d0b9.chunk.js",
-    "static/css/main.1a0db383.chunk.css",
+    "static/css/main.0cb44880.chunk.css",
     "static/js/main.235a7a3f.chunk.js"
   ]
 }
