@@ -21,7 +21,7 @@
 html {
     display: flex;
     flex-direction: column;
-    font-size: 120;
+    font-size: 100%;
     height: auto;
     margin: none;
     overflow: auto;
@@ -98,6 +98,7 @@ html {
 
 .NoteApp-note-text {
     background-color: var(--LSCred);
+    font-size: 130%;
     word-break: normal;
 }
 
