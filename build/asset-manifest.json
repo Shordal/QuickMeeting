@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/QuickMeeting/static/css/main.d850015b.chunk.css",
-    "main.js": "/QuickMeeting/static/js/main.55f5f989.chunk.js",
-    "main.js.map": "/QuickMeeting/static/js/main.55f5f989.chunk.js.map",
+    "main.css": "/QuickMeeting/static/css/main.1a0db383.chunk.css",
+    "main.js": "/QuickMeeting/static/js/main.235a7a3f.chunk.js",
+    "main.js.map": "/QuickMeeting/static/js/main.235a7a3f.chunk.js.map",
     "runtime-main.js": "/QuickMeeting/static/js/runtime-main.2dc85dfe.js",
     "runtime-main.js.map": "/QuickMeeting/static/js/runtime-main.2dc85dfe.js.map",
-    "static/js/2.109c2f39.chunk.js": "/QuickMeeting/static/js/2.109c2f39.chunk.js",
-    "static/js/2.109c2f39.chunk.js.map": "/QuickMeeting/static/js/2.109c2f39.chunk.js.map",
+    "static/js/2.2e67d0b9.chunk.js": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js",
+    "static/js/2.2e67d0b9.chunk.js.map": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js.map",
     "index.html": "/QuickMeeting/index.html",
-    "precache-manifest.2d6513b81e39ba5fc49763e3de7f3538.js": "/QuickMeeting/precache-manifest.2d6513b81e39ba5fc49763e3de7f3538.js",
+    "precache-manifest.c3007ed8ae1d6c47152993258f968503.js": "/QuickMeeting/precache-manifest.c3007ed8ae1d6c47152993258f968503.js",
     "service-worker.js": "/QuickMeeting/service-worker.js",
-    "static/css/main.d850015b.chunk.css.map": "/QuickMeeting/static/css/main.d850015b.chunk.css.map",
-    "static/js/2.109c2f39.chunk.js.LICENSE": "/QuickMeeting/static/js/2.109c2f39.chunk.js.LICENSE",
-    "static/media/OTS-Banner.svg": "/QuickMeeting/static/media/OTS-Banner.a81e6ec6.svg"
+    "static/css/main.1a0db383.chunk.css.map": "/QuickMeeting/static/css/main.1a0db383.chunk.css.map",
+    "static/js/2.2e67d0b9.chunk.js.LICENSE": "/QuickMeeting/static/js/2.2e67d0b9.chunk.js.LICENSE",
+    "static/media/LSCT-CollegeRelations-Banner.svg": "/QuickMeeting/static/media/LSCT-CollegeRelations-Banner.810af182.svg",
+    "static/media/LSCT-StudentLife-Banner.svg": "/QuickMeeting/static/media/LSCT-StudentLife-Banner.ce23f183.svg",
+    "static/media/OTS-Banner.svg": "/QuickMeeting/static/media/OTS-Banner.a81e6ec6.svg",
+    "static/media/TomballBanner.png": "/QuickMeeting/static/media/TomballBanner.cacbaa55.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2dc85dfe.js",
-    "static/js/2.109c2f39.chunk.js",
-    "static/css/main.d850015b.chunk.css",
-    "static/js/main.55f5f989.chunk.js"
+    "static/js/2.2e67d0b9.chunk.js",
+    "static/css/main.1a0db383.chunk.css",
+    "static/js/main.235a7a3f.chunk.js"
   ]
 }

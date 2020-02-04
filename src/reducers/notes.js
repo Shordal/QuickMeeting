@@ -15,5 +15,4 @@ const notesReducer = (state, action) => {
             return state
     }
 }
-
 export { notesReducer as default }
